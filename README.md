@@ -7,7 +7,7 @@ Under development
 ## Description
 This program allows to pick the best combination of shares to maximize the profits after 2 years.
 The program can run 2 algorithms:
-1. Knapsack: this algorithm is derived from the dynamic programing solution to the knapsack problem. The time complexity of this algorithm is O(n).
+1. Knapsack: this algorithm is derived from the dynamic programming solution to the knapsack problem. The time complexity of this algorithm is O(n).
 2. Brute Force: this algorithm evaluates all possible combination of shares for a given wallet. It then calculates the profit for each combination and selects the combination with the highest profit. The time complexity of this algorithm is O(2^n). This algorithm is very inefficient and is implemented only for testing purpose.
 
 ## Installation
@@ -21,11 +21,11 @@ main.py [-h] [-f FILE] [-w WALLET] [-a ALGORITHM]
 optional arguments:
   -h, --help            show this help message and exit
   -f FILE, --file FILE  Path to the csv file containing a list of shares, values and yields 
-                        (default: data/sample.csv)
+                        (default: "data/sample.csv")
   -w WALLET, --wallet WALLET
                         Wallet capacity in Euros (default: 500)
   -a ALGORITHM, --algorithm ALGORITHM
-                        Type of algorithm: knapsack or brute_force (brute force algorithm is not 
+                        Type of algorithm: "knapsack" or "brute_force" (brute force algorithm is not 
                         recommended to compute more than 6 shares) (default: knapsack)
 ```
 
