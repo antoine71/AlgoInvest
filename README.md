@@ -8,7 +8,7 @@ Under development
 This program allows to pick the best combination of shares to maximize the profits after 2 years.
 The program can run 2 algorithms:
 1. Knapsack: this algorithm is derived from the dynamic programing solution to the knapsack problem. The time complexity of this algorithm is O(n).
-2. Brute Force: this algorithm evaluates all possible combination of shares for a given amount of wallet. It then calculates the profit for each combination and select the combination with the highest profit. The time complexity of this algorithm is O(2^n). This algorithm is very inefficient and is implemented only for texsting purpose.
+2. Brute Force: this algorithm evaluates all possible combination of shares for a given wallet. It then calculates the profit for each combination and select the combination with the highest profit. The time complexity of this algorithm is O(2^n). This algorithm is very inefficient and is implemented only for testing purpose.
 
 ## Installation
 * Clone this repository using `$ git clone https://github.com/antoine71/AlgoInvest.git` (you can also download the code using [as a zip file](https://github.com/antoine71/AlgoInvest/archive/main.zip)).
@@ -17,7 +17,6 @@ The program can run 2 algorithms:
 ## Usage
 ```bash
 main.py [-h] [-f FILE] [-w WALLET] [-a ALGORITHM]
-```
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -26,8 +25,9 @@ optional arguments:
                         Wallet capacity in Euros (default: 500)
   -a ALGORITHM, --algorithm ALGORITHM
                         Type of algorithm: knapsack or brute_force (brute force algorithm is not recommended to compute more than 6 shares) (default: knapsack)
+```
 
-The repository contains 3 shares sample files located in the subfolder data:
+The repository contains 3 shares sample files located in the subfolder data that can be used for testing purpose or as templates:
 * dataFinance.csv (100,000 shares)
 * sample.csv (20 shares)
 * sample_short.csv (6 shares)
