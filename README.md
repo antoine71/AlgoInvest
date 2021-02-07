@@ -15,7 +15,7 @@ The program can run 2 algorithms:
 * It is not required to setup a virtual environment and install packages to run the application.
 
 ## Usage
-`
+```
 main.py [-h] [-f FILE] [-w WALLET] [-a ALGORITHM]
 
 optional arguments:
@@ -27,7 +27,7 @@ optional arguments:
   -a ALGORITHM, --algorithm ALGORITHM
                         Type of algorithm: knapsack or brute_force (brute force algorithm is not 
                         recommended to compute more than 6 shares) (default: knapsack)
-`
+```
 
 The repository contains 3 shares sample files located in the subfolder data that can be used for testing purpose or as templates:
 * dataFinance.csv (100,000 shares)
