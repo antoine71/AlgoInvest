@@ -15,9 +15,9 @@ The program can run 2 algorithms:
 * It is not required to setup a virtual environment and install packages to run the application.
 
 ## Usage
+```bash
+python main.py [-h] [-f FILE] [-w WALLET] [-a ALGORITHM]```
 ```
-main.py [-h] [-f FILE] [-w WALLET] [-a ALGORITHM]
-
 optional arguments:
   -h, --help            show this help message and exit
   -f FILE, --file FILE  Path to the csv file containing a list of shares, values and yields 
@@ -26,7 +26,7 @@ optional arguments:
                         Wallet capacity in Euros (default: 500)
   -a ALGORITHM, --algorithm ALGORITHM
                         Type of algorithm: "knapsack" or "brute_force" (brute force algorithm is not 
-                        recommended to compute more than 6 shares) (default: knapsack)
+                        recommended to compute more than 6 shares) (default: "knapsack")
 ```
 
 The repository contains 3 shares sample files located in the subfolder data that can be used for testing purpose or as templates:
