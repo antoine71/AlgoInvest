@@ -1,5 +1,4 @@
-from shares.shares import SharesManager
-from views.result_view import ResultView
+from controllers.application_controller import ApplicationController
 
 import argparse
 
@@ -25,12 +24,5 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-shares = SharesManager()
-shares.import_csv(args.file)
-
-if args.algorithm == "knapsack":
-    result = shares.knapsack(args.wallet)
-elif args.algorithm == "brute_force":
-    result = shares.brute_force(args.wallet)
-
-ResultView(result, shares).display_result()
+controller = ApplicationController(args.file, args.wallet, args.algorithm)
+controller.run()

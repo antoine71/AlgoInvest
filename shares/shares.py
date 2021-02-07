@@ -34,6 +34,8 @@ class SharesManager:
                 ]
 
     def knapsack(self, wallet_capacity, step=0.1):
+        """This functions calls the knapsack algorithm on the shares of the SharesManager object."""
+
         shares = [share for share in self.shares if share.value <= wallet_capacity]
         values = [int((1 / step) * share.value) for share in shares]
         profits = [share.profit for share in shares]
@@ -44,12 +46,8 @@ class SharesManager:
 
         return best_profit, best_shares
 
-    def get_share_by_name(self, share_name):
-        for share in self.shares:
-            if share.name == share_name:
-                return share
-
     def brute_force(self, wallet_capacity):
+        """This functions calls the brute force algorithm on the shares of the SharesManager object."""
         shares = [share for share in self.shares if share.value <= wallet_capacity]
         values = [int(share.value) for share in shares]
         profits = [share.profit for share in shares]
@@ -59,24 +57,10 @@ class SharesManager:
 
         return best_profit, best_shares
 
-    def brute_force_(self, wallet_capacity):
-
-        max_number_of_shares = [wallet_capacity // share_value for share_value in self.values]
-
-        shares_combinations_product = product(*[list(range(i + 1)) for i in max_number_of_shares])
-        shares_combinations = [combinations for combinations in shares_combinations_product]
-
-        possible_shares_combinations = [combinations for combinations in shares_combinations
-                                        if sum(product_lists(self.values, combinations)) == wallet_capacity]
-
-        possible_combinations_profits = [sum(product_lists(self.profits, combinations))
-                                         for combinations in possible_shares_combinations]
-
-        best_combinations_profit = max(possible_combinations_profits)
-        best_combinations_index = possible_combinations_profits.index(best_combinations_profit)
-        best_combinations = possible_shares_combinations[best_combinations_index]
-
-        return best_combinations_profit, best_combinations
+    def get_share_by_name(self, share_name):
+        for share in self.shares:
+            if share.name == share_name:
+                return share
 
     def __len__(self):
         return len(self.shares)
