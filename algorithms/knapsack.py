@@ -1,5 +1,13 @@
+"""This modules defines the knapsack algorithm."""
+
+
 def knapsack(values, profits, names, wallet_capacity):
-    """This function implements the knapsack solution algorithm using dynamic programming."""
+    """This function implements a dynamic programming algorithm derived from the solution to the knapsack problem.
+        It returns the result as a tuple:
+        * best_profit is the profit made in the shares currency
+        * best_shares is a dictionnary that contains as key the name of the shares to be selected to
+        achieve the best profit, and as values the quantity of shares to pick."""
+
     number_of_shares = len(values)
 
     # This array store the profits for knapsacks of sizes from 0 to wallet capacity.
@@ -46,7 +54,7 @@ def knapsack(values, profits, names, wallet_capacity):
         profits_array[0] = list(profits_array[1])
         combinations[0] = list(combinations[1])
 
-    max_profit = profits_array[1][wallet_capacity]
-    max_combination = combinations[1][wallet_capacity]
+    best_profit = profits_array[1][wallet_capacity]
+    best_shares = combinations[1][wallet_capacity]
 
-    return max_profit, max_combination
+    return best_profit, best_shares

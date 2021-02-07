@@ -1,4 +1,8 @@
+"""This modules defines the views to display the information to the user"""
+
+
 class ResultView:
+    """This class displays the results obtained from the ShareManager algorithmic methods"""
 
     def __init__(self, sample, wallet, algorithm, shares_manager):
         self.sample = sample

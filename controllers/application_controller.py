@@ -1,9 +1,12 @@
+"""This modules defines the controllers to that manage the application execution"""
+
 from shares.shares import SharesManager
 from views.result_view import ResultView
 from utils.timer import timer
 
 
 class ApplicationController:
+    """This controller runs the algorithms and call the view to display the results"""
 
     def __init__(self, sample, wallet, algorithm):
         self.sample = sample

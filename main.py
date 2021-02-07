@@ -1,6 +1,9 @@
+"""This is the main script of the application."""
+
 from controllers.application_controller import ApplicationController
 
 import argparse
+
 
 parser = argparse.ArgumentParser(description="Find the most valuable shares combination")
 parser.add_argument(

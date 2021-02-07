@@ -1,9 +1,18 @@
-from utils.utils import product_lists
+"""This modules defines the brute force algorithm."""
+
+from utils.lists_operations import product_lists
 
 from itertools import product
 
 
 def brute_force(values, profits, names, wallet_capacity):
+    """This function implements a brute force algorithm. This algorithm evaluates all possible combination
+    of shares for a given wallet. It then calculates the profit for each combination and selects the combination
+    with the highest profit. The time complexity of this algorithm is O(2^n).
+    It returns the result as a tuple:
+    * best_profit is the profit made in the shares currency
+    * best_shares is a dictionnary that contains as key the name of the shares to be selected to
+    achieve the best profit, and as values the quantity of shares to pick."""
 
     max_number_of_shares = [wallet_capacity // share_value for share_value in values]
 
