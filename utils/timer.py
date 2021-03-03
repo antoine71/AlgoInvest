@@ -4,7 +4,7 @@ import time
 
 
 def timer(algorithm_function):
-    """This function is a decorator that estimates another function execution time"""""
+    """This function is a decorator that estimates another function execution time"""
     def modified_function(*args):
         time_before = time.time()
         result = algorithm_function(*args)

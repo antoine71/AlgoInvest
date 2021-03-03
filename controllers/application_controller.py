@@ -17,8 +17,8 @@ class ApplicationController:
         self.view = ResultView(self.sample, self.wallet, self.algorithm, self.shares)
 
     def run(self):
-        if self.algorithm == "knapsack":
-            result, execution_time = timer(self.shares.knapsack)(self.wallet)
+        if self.algorithm == "optimized":
+            result, execution_time = timer(self.shares.optimized)(self.wallet)
         elif self.algorithm == "brute_force":
             result, execution_time = timer(self.shares.brute_force)(self.wallet)
         self.view.display_result(result, execution_time)

@@ -1,4 +1,6 @@
-"""This is the main script of the application."""
+"""
+This is the main script of the application.
+"""
 
 from controllers.application_controller import ApplicationController
 
@@ -9,9 +11,9 @@ parser = argparse.ArgumentParser(description="Find the most valuable shares comb
 parser.add_argument(
     "-f", "--file",
     type=str,
-    default="data/sample.csv",
+    default="data/dataset2.csv",
     help="Path to the csv file containing a list of shares, values and yields\
-    (default: data/sample.csv)")
+    (default: data/dataset2.csv)")
 parser.add_argument(
     "-w", "--wallet",
     type=int,
@@ -20,10 +22,10 @@ parser.add_argument(
 parser.add_argument(
     "-a", "--algorithm",
     type=str,
-    default="knapsack",
-    help="Type of algorithm: knapsack or brute_force\
+    default="optimized",
+    help="Type of algorithm: optimized or brute_force\
     (brute force algorithm is not recommended to compute more than 5 shares)\
-    (default: knapsack)")
+    (default: optimized)")
 
 args = parser.parse_args()
 
