@@ -16,7 +16,7 @@ def optimized(values, profits, names, wallet_capacity, scale_factor=1):
     wallet_capacity *= scale_factor
     number_of_shares = len(values)
 
-    # This array store the profits for knapsacks of sizes from 0 to wallet 
+    # This array store the profits for knapsacks of sizes from 0 to wallet
     # capacity.
     # It contains only 2 rows to save memory.
     profits_array = [

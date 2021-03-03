@@ -15,12 +15,14 @@ The program can run 2 algorithms:
 2. brute Force: this algorithm evaluates all possible combination of shares for a given wallet. It then calculates the profit for each combination and selects the combination with the highest profit. The time complexity of this algorithm is O(2^n) (time required to evaluate a sample of 6 shares: approx. 15 sec.). This algorithm is very inefficient and is implemented only for testing purpose.
 
 ## Installation
+
 * Install Python 3.
 * Clone this repository using `$ git clone https://github.com/antoine71/AlgoInvest.git` (you can also download the code [as a zip file](https://github.com/antoine71/AlgoInvest/archive/main.zip)).
 * It is not required to setup a virtual environment and install packages to run the application.
 
 ## Usage
-```
+
+```bash
 $ python main.py [-h] [-f FILE] [-w WALLET] [-a ALGORITHM]
 
 optional arguments:
@@ -42,4 +44,5 @@ The repository contains 4 shares sample files located in the subfolder data that
 * sample_short.csv (6 shares)
 
 ## Preview
-![](/preview.jpg)
+
+![preview](/preview.jpg)
