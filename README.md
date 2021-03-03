@@ -4,7 +4,7 @@ Openclassrooms - Parcours développement Python Projet 7
 
 ## Status
 
-Under development
+This project is ready for evaluation
 
 ## Description
 
@@ -12,7 +12,9 @@ This program allows to pick the best combination of shares to maximize the profi
 The program can run 2 algorithms:
 
 1. optimized: this algorithm is a dynamic programming solution to the problem. The time complexity of this algorithm is O(n) (time required to evaluate a sample of 1,000 shares: approx. 15 sec.).
+The code for this algorithm is found in the following file: `algorithms/optimized.py`
 2. brute Force: this algorithm evaluates all possible combination of shares for a given wallet. It then calculates the profit for each combination and selects the combination with the highest profit. The time complexity of this algorithm is O(2^n) (time required to evaluate a sample of 6 shares: approx. 15 sec.). This algorithm is very inefficient and is implemented only for testing purpose.
+The code for this algorithm is found in the following file: `algorithms/brute_force.py`
 
 ## Installation
 
